@@ -39,13 +39,13 @@ while True:
     Alternativly, you can use the move_y() and move_x() functions as demonstrated below
     '''
     keys = pygame.key.get_pressed()
-    if keys[K_w]:
+    if keys[K_w]or keys[K_UP]:
         bg.move_y(15)
-    if keys[K_s]:
+    if keys[K_s]or keys[K_DOWN]:
         bg.move_y(-15)
-    if keys[K_a]:
+    if keys[K_a]or keys[K_LEFT]:
         bg.move_x(15)
-    if keys[K_d]:
+    if keys[K_d]or keys[K_RIGHT]:
         bg.move_x(-15)
 
     
