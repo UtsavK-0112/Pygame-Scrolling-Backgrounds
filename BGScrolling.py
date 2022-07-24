@@ -1,6 +1,8 @@
 '''
 A very simple module to make side-scrolling backgrounds in pygame.
-See 'example.py' to learn how to use this module in your own project.
+Can be used for vertical and horizontal scrolling.
+
+See the examples to learn how to use this module in your own project.
 '''
 
 import pygame
@@ -50,6 +52,9 @@ class BACKGROUND:
         self.move(Vector2(0, pos))
 
     def update(self):
+        '''
+        This repositions the background and buffers when they move out the screen.
+        '''
         if self.pos.x > self.width:
             self.pos.x -= self.width
             for buffer in self.buffers:
